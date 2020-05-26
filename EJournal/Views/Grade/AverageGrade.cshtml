@@ -1,0 +1,28 @@
+﻿@model List<StudentModel>
+@{
+    ViewData["Title"] = "Average Grade";
+}
+
+<h2>Average Grade</h2>
+
+<a asp-controller="Student" asp-action="StudentIndex" asp-route-id="">Back</a>
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Class</th>
+        <th>Average grade</th>
+    </tr>
+
+    @foreach (var grade in Model)
+    {
+        <tr>
+            <td>@grade.Name</td>
+            <td>@grade.Surname</td>
+            <td>@grade.Class</td>
+            <td>@grade</td>
+         </tr>
+    }
+</table>

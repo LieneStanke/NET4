@@ -1,0 +1,22 @@
+﻿@model List<int>
+@{
+    ViewData["Title"] = "Subject Grades";
+}
+
+    <h2>Subject Grades</h2>
+
+<a asp-controller="Subject" asp-action="SubjectIndex" asp-route-id="">Back</a>
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>All grades</th>
+    </tr>
+   
+    @foreach(var grades in Model)
+    {
+       <tr>
+           <td>@grades</td>
+       </tr>
+    }
+</table>
